@@ -26,26 +26,4 @@ if(a != '' && b != '' && c != '' &&d != ''){
 
 }
 
-
-function sendemail(){
-
-	var email=document.getElementById("email").value;
-	var name=document.getElementById("name").value;
-	var message=document.getElementById("message").value;
-
-	var templateParams = {
-        email: email,
-        name : name,
-		message: message
-      };
-
-      emailjs.send('service_t25x3hb', 'template_o7ohy7j', templateParams)
-      .then(function(response) {
-     console.log('SUCCESS!', response.status, response.text);
-     window.alert("Sent successfully!");
-     
-  })
-
-     
-}
         
